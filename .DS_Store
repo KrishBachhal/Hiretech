@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Improved Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Your content goes here -->
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <main>
+        <p>Your content goes here.</p>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023</p>
+    </footer>
 </body>
 </html>
