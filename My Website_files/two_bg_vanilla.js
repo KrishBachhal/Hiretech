@@ -11,29 +11,36 @@ window.addEventListener('elementor/frontend/init', () => {
 
 function two_replace_backgrounds(elementor_elements = false) {
     let two_elements_list;
+
     if (!elementor_elements) {
         two_elements_list = getTwoElementsList();
     } else {
-        two_elements_list = elementor_elements.querySelectorAll('.two_elementor_element');
+        two_elements_list = Array.from(elementor_elements.querySelectorAll('.two_elementor_element'));
+    }
+
+    if (!two_elements_list.length) {
+        console.warn('No elements found with the class "two_elementor_element"');
+        return;
     }
 
     for (const elem of two_elements_list) {
         const style = getComputedStyle(elem, null);
         const bg_image = style.backgroundImage;
 
-        if (bg_image === 'none' || bg_image.indexOf(window['two_svg_placeholder']) === -1) {
+        if (!bg_image || bg_image === 'none' || bg_image.includes('none') || !bg_image.includes('url(')) {
             continue;
         }
 
-        bg_image = bg_image.replace(window['two_svg_placeholder'], '');
-        if (!bg_image) {
+        const url = bg_image.slice(4, -1).replace(window['two_svg_placeholder'], '');
+
+        if (!url) {
             continue;
         }
 
         addTwoBgClass(elem);
         addLazyClass(elem);
         removeTwoElementorElementClass(elem);
-        setDataBgMultiAttribute(elem, bg_image);
+        setDataBgMultiAttribute(elem, url);
     }
 
     if (typeof two_lazyLoadInstance === 'undefined') {
@@ -70,4 +77,15 @@ function addTwoBgClass(elem) {
     elem.classList.add('two_bg');
 }
 
-function addLazyClass(elem
+function addLazyClass(elem) {
+    const lazyClass = 'two-lazy-load';
+    if (!elem.classList.contains(lazyClass)) {
+        elem.classList.add(lazyClass);
+    }
+}
+
+function removeTwoElementorElementClass(elem) {
+    elem.classList.remove('two_elementor_element');
+}
+
+
