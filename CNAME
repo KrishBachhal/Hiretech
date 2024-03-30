@@ -5,9 +5,17 @@ def calc_salary(employee):
     Args:
         employee (dict): A dictionary containing the employee's hourly rate, full-time status, and hourly rate.
 
+        employee['is_full_time'] (bool): A boolean indicating whether the employee is full-time or not.
+        employee['hourly_rate'] (float): The employee's hourly rate.
+
     Returns:
         int: The annual salary of the employee.
     """
+    # Set the number of hours per week based on the employee's full-time status
     hours_per_week = 40 if employee['is_full_time'] else 32
+
+    # Calculate the annual salary by multiplying the hours per week, hourly rate, and number of weeks in a year
     annual_salary = hours_per_week * employee['hourly_rate'] * 52
+
+    # Return the calculated annual salary
     return annual_salary
