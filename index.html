@@ -465,4 +465,13 @@ onStylesLoadEvent=new Event("two_css_loaded");window.dispatchEvent(onStylesLoadE
                                 }
                             </script>
 
-<span id="elementor-device-mode" class="elementor-screen-only"></span></body></html>
+<span id="elementor-device-mode" class="elementor-screen-only"></span>
+
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "16f2cd6a-0666-4672-bfa9-b6026d71b338",
+        apiHost: "http://localhost:3000",
+    })
+</script>
+</body></html>
