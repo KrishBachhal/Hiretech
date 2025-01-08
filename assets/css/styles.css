@@ -1,0 +1,72 @@
+/* Theme Colors */
+:root {
+    --primary-green: #2E7D32;
+    --dark-green: #1B5E20;
+    --medium-green: #388E3C;
+    --light-green: #E8F5E9;
+    --soft-green: #C8E6C9;
+    --white: #ffffff;
+}
+
+/* Chat Button Styles */
+.chat-button {
+    background-color: var(--primary-green);
+    color: var(--white);
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+}
+
+/* Tooltip Styles */
+.chat-tooltip {
+    background-color: var(--dark-green);
+    color: var(--white);
+    font-size: 16px;
+}
+
+/* Disclaimer Styles */
+.chat-disclaimer {
+    color: var(--dark-green);
+    background-color: var(--white);
+}
+
+.chat-disclaimer-button {
+    background-color: var(--medium-green);
+    color: var(--white);
+}
+
+/* Chat Window Styles */
+.chat-window {
+    background-color: var(--light-green);
+    height: 700px;
+    width: 400px;
+    font-size: 16px;
+}
+
+.bot-message {
+    background-color: var(--soft-green);
+    color: var(--dark-green);
+}
+
+.user-message {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.chat-input {
+    background-color: var(--white);
+    color: var(--dark-green);
+}
+
+.send-button {
+    background-color: var(--primary-green);
+}
+
+.starter-prompts {
+    font-size: 15px;
+}
+
+.chat-feedback {
+    color: var(--dark-green);
+} 
