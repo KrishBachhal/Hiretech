@@ -835,13 +835,14 @@
  <script type="module">
   import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
   Chatbot.init({
-      chatflowid: "dc4f6be3-88c8-4ea2-a01e-3493eb34ffd6",
+      chatflowid: "0330cb41-0ad9-49f1-9b82-63f3080135bf",
       apiHost: "https://krish-jatt-flowise.hf.space",
+      headers: {
+            "Authorization": "test"
+        },
       chatflowConfig: {
           /* Chatflow Config */
-          headers: {
-              "Authorization": "Basic " + btoa("Krish:onePlus7t")  // test
-          }
+         
       },
       observersConfig: {
           /* Observers Config */
