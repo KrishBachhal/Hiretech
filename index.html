@@ -435,11 +435,12 @@
             📩 Email Us
         </a>
 
-        <a href="#live-chat"
+        <a href="#" onclick="openChatbot()" 
             style="display: inline-block; padding: 14px 28px; background-color: #0073ff; color: #fff; font-weight: bold; 
             text-decoration: none; border-radius: 8px; font-size: 18px; transition: transform 0.3s ease-in-out; animation: pulse 2.5s infinite;">
             💬 Chat With Us Now
         </a>
+    
     </div>
 
 </section>
@@ -1067,6 +1068,19 @@
       }
   })
  </script>
+ <script>
+    function openChatbot() {
+        // Find the chatbot widget's existing button
+        let chatButton = document.querySelector('.flowise-chatbot-container button'); 
+
+        if (chatButton) {
+            chatButton.click();  // ✅ Simulate a click on the chatbot button
+        } else {
+            console.error("Chatbot button not found.");
+        }
+    }
+</script>
+
 </body>
 
 </html>
